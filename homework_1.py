@@ -4,22 +4,31 @@
 # - 7 -> да
 # - 1 -> нет
 
-number = int(input('Введите число: '))
-if number == 6 or number == 7:
-    print('да')
-if 1 < number < 6:
-    print('нет')
-if number > 7 or number < 1:
-    print('false')
+# number = int(input('Введите число: '))
+# if number == 6 or number == 7:
+#     print('да')
+# if 1 < number < 6:
+#     print('нет')
+# if number > 7 or number < 1:
+#     print('false')
 
 ########################################################################################################################################
 
 # 2. Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
-# for x in range(0,2):
-#     for y in range(0,2):
-#         for z in range(0,2):
-#             print(not (x or y or z) == (not (x) and not (y) and not (z)))
+# print('x y z \t¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
+# for x in range(2):
+#     for y in range(2):
+#         for z in range(2):
+#             print(x, y, z, '\t', not (x or y or z) == (not (x) and not (y) and not (z)))
+
+# Вариант 2:
+# print('x y z \t¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
+# for n in range(64):
+# n = bin(n)[2:].rjust(6, '0')
+# print(n)
+# x, y, z = int(n[0]), int(n[1]), int(n[2])
+# print(x, y, z, '\t', not(x or y or z) == (not(x) and not(y) and not(z)))
 
 ########################################################################################################################################
 
