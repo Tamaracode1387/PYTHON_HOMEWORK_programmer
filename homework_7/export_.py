@@ -1,17 +1,23 @@
 def export_func1(last_name):
-    with open('info1.txt', 'r', encoding='utf-8') as f:
+    with open('database.txt', 'r', encoding='utf-8') as f:
         info_list = f.read().splitlines()
         for person in info_list:
             if last_name in person:
-                print(person)
+                with open('info1.txt', 'a', encoding='utf-8') as d:
+                    d.write(person + '\n')
 
 
 def export_func2(last_name):
-    with open('info2.txt', 'r', encoding='utf-8') as f:
+    with open('database.txt', 'r', encoding='utf-8') as f:
         info_list = f.read().splitlines()
-        for i in range(0, len(info_list), 5):
-            if last_name in info_list[i]:
-                print(info_list[i] + '\n', info_list[i + 1] + '\n', info_list[i + 2] + '\n', info_list[i + 3] + '\n')
+        for person in info_list:
+            if last_name in person:
+                person_list = person.split(" ")
+                with open('info2.txt', 'a', encoding='utf-8') as d:
+                    for i in person_list:
+                        d.write(i + '\n')
+                    d.write('\n')
+
 
 
 
